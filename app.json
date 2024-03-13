@@ -15,16 +15,29 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.samuelcastilloseo.cdquetzal"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.samuelcastilloseo.cdquetzal"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "scheme": "cdquetzal",
+    "plugins": [
+      [
+        "@react-native-google-signin/google-signin"
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e2d705a6-22df-41ac-a85e-b6960556f3e3"
+      }
     }
   }
 }
