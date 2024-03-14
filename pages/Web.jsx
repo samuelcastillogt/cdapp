@@ -7,8 +7,9 @@ const Web = ({route, navigation})=>{
     return(
         <WebView
         style={styles.container}
-        source={{ uri: uri }}
+        source={{ uri: uri.replace("http:", "https:") }}
         renderLoading={()=> Loader}
+        originWhitelist={['*']}
       />
   
     )

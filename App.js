@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Button, StyleSheet, Text, View, Platform, StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStack from './stacks/HomeStack';
@@ -12,6 +13,7 @@ import ShopStack from './stacks/ShopStack';
 ///// auth
 import * as WebBrowser from "expo-web-browser"
 import * as Google from "expo-auth-session/providers/google"
+import Trafico from './pages/Trafico';
 WebBrowser.maybeCompleteAuthSession()
 // ios = 584037980083-elpcbei2utdi1quqi83ctk477avmdqs1.apps.googleusercontent.com
 // android = 584037980083-itidperqsfcvctac7ttol51kamu3mmeh.apps.googleusercontent.com
@@ -57,6 +59,10 @@ export default function App() {
                                                               headerShown: false,
                                                               tabBarIcon:() => {return <Fontisto name="shopping-store" size={24} color="black" />}
                                                             }} />
+           <Tab.Screen name="Trafico" component={Trafico} options={{
+                                                              headerShown: false,
+                                                              tabBarIcon:() => {return <FontAwesome name="car" size={24} color="black" />}
+                                                            }} />                                                       
     </Tab.Navigator>      
     </NavigationContainer>
     </>

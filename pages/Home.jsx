@@ -18,12 +18,12 @@ const Home = ({ navigation })=>{
         <View style={styles.container}>
             <Slider navigation={navigation}/>
             <ScrollView >
-            {posts && posts.length >0 && posts.map(item => <BlogPost url={item.url} title={item.title} ir={navigation} key={item.url}/>)  }            
+            {posts && posts.length >0 && posts.map((item, index )=> <BlogPost url={item.url} title={item.title} ir={navigation} key={item.url} index={index}/>)  }            
             </ScrollView>
-
+{/* 
             <View style={styles.addButon} >
             <MaterialIcons name="add-to-photos" size={40} color="#365486" onPress={()=> console.log("lalalal")}/>
-            </View>
+            </View> */}
         </View>
     )
 }
