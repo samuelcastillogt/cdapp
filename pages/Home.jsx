@@ -16,7 +16,7 @@ const Home = ({ navigation })=>{
     },[])
     return(
         <View style={styles.container}>
-            <Slider />
+            <Slider navigation={navigation}/>
             <ScrollView >
             {posts && posts.length >0 && posts.map(item => <BlogPost url={item.url} title={item.title} ir={navigation} key={item.url}/>)  }            
             </ScrollView>

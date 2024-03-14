@@ -1,18 +1,25 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ImageBackground, TouchableHighlight } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 const data = [
     {
-        title: "Primer jsjsjsjsj sjsjsjsjs",
+        title: "Anunciate Aqui",
+        uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RFril7o28C8wJuXshqBnSLDDMiJjutW9uw&usqp=CAU",
+        url: "https://mariachis-evangelicos.github.io/"
     },
     {
-        title: "Segundo",
+        title: "Imprenta en Ciudad Quetzal",
+        uri: "https://marketincloud.com/wp-content/uploads/2015/02/8283313605_278727bf2b_k.jpg",
+        url: "https://mariachis-evangelicos.github.io/"
     },
     {
-        title: "Tercero",
+        title: "Mariachi Cristiano",
+        uri: "https://mariachis-evangelicos.github.io/assets/marichi-cristiano-cumplea%C3%B1os.jpg",
+        url: "https://mariachis-evangelicos.github.io/"
     }
 ]
-const Slider = ()=>{
+const Slider = (props)=>{
+    const {navigation} = props
     const [index, setIndex] = useState(0)
     const back = ()=>{
         if(index == 0){
@@ -29,24 +36,47 @@ const Slider = ()=>{
         }
     }
     return(
-        <View style={styles.container}>
-            <MaterialIcons name="arrow-back-ios-new" size={24} color="black" onPress={back}/>
-            <Text>{data[index].title}</Text>
-            <MaterialIcons name="arrow-forward-ios" size={24} color="black" onPress={next}/>
-        </View>
+        <View style={styles.container}> 
+        <MaterialIcons name="arrow-back-ios-new" size={24} color="black" onPress={back}/>
+        <TouchableHighlight onPress={()=> navigation.navigate("Web",  {uri: data[index].url})} style={styles.touch}>
+        <ImageBackground source={{uri: data[index].uri}} resizeMode="cover" style={styles.image}>
+            
+            <Text style={styles.title}>{data[index].title}</Text>
+            
+        </ImageBackground>            
+        </TouchableHighlight>
+
+        <MaterialIcons name="arrow-forward-ios" size={24} color="black" onPress={next}/>
+         </View>
     )
 }
 const styles = StyleSheet.create({
     container: {
         width: "90%",
         height: 150,
-        backgroundColor: "red",
         margin: 5,
         borderRadius: 10,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
         alignItems: "center"
-    }
+    },
+    title: {
+        fontWeight: "bold",
+        backgroundColor: "rgba(237, 231, 225, 0.8)",
+        padding: 10
+      },
+      image: {
+        flex: 1,
+        justifyContent: 'space-around',
+        flexDirection: "row",
+        alignItems: "center",
+        height: 150,
+        borderRadius: 10
+      },
+      touch: {
+        width: 500,
+        flex: 1
+      }
 })
 export default Slider
