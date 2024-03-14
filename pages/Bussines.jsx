@@ -7,6 +7,9 @@ const Bussines = ({navigation, route})=>{
         <View style={styles.container}>
             <Image source={{uri:data.data.imagen}} style={styles.imagen}/>
             <Text style={styles.title}>{data.data.nombre}</Text>
+            <Text style={styles.direccion}>{data.data.categoria}</Text>
+            <Text style={styles.desc}>{data.data.descripcion}</Text>
+            <Text style={styles.direccion}>Direccion: {data.data.direccion}</Text>
         </View>
     )
 }
@@ -33,6 +36,13 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: "bold",
         color: "white"
+    },
+    desc :{
+        fontSize: 15,
+        color: "white"
+    },
+    direccion:{
+        color:"#F5E8C7"
     }
 })
 export default Bussines
