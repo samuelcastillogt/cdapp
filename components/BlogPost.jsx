@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     },
     title: {
         fontWeight: "bold",
-        padding: 10
+        padding: 10,
+        color: "#F5E8C7"
     },
     par: {
         backgroundColor: "#818FB4",

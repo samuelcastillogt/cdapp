@@ -13,7 +13,7 @@ import ShopStack from './stacks/ShopStack';
 ///// auth
 import * as WebBrowser from "expo-web-browser"
 import * as Google from "expo-auth-session/providers/google"
-import Trafico from './pages/Trafico';
+import Trafico from './stacks/Trafico';
 WebBrowser.maybeCompleteAuthSession()
 // ios = 584037980083-elpcbei2utdi1quqi83ctk477avmdqs1.apps.googleusercontent.com
 // android = 584037980083-itidperqsfcvctac7ttol51kamu3mmeh.apps.googleusercontent.com
@@ -47,7 +47,7 @@ export default function App() {
     }
   }
   return (
-    <>
+    <View style={styles.container}>
     {/* <Button title="login" onPress={()=> promptAsync()}/> */}
     <NavigationContainer>
     <Tab.Navigator>
@@ -65,7 +65,7 @@ export default function App() {
                                                             }} />                                                       
     </Tab.Navigator>      
     </NavigationContainer>
-    </>
+    </View>
     
 
   );
@@ -74,6 +74,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#DCF2F1',
+    backgroundColor: 'red',
   },
 });

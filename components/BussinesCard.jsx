@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginTop: 40,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        backgroundColor: "white"
     },
     title: {
         padding: 10,

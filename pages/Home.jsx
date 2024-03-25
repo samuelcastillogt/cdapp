@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         justifyContent: "center",
-        paddingTop: StatusBar.currentHeight
+        paddingTop: StatusBar.currentHeight,
+        backgroundColor: "#F5E8C7"
     },
     texto: {
         color: "#0F1035",

@@ -37,7 +37,7 @@ const Slider = (props)=>{
     }
     return(
         <View style={styles.container}> 
-        <MaterialIcons name="arrow-back-ios-new" size={24} color="black" onPress={back}/>
+        <MaterialIcons name="arrow-back-ios-new" size={24} color="#363062" onPress={back}/>
         <TouchableHighlight onPress={()=> navigation.navigate("Web",  {uri: data[index].url})} style={styles.touch}>
         <ImageBackground source={{uri: data[index].uri}} resizeMode="cover" style={styles.image}>
             
@@ -46,7 +46,7 @@ const Slider = (props)=>{
         </ImageBackground>            
         </TouchableHighlight>
 
-        <MaterialIcons name="arrow-forward-ios" size={24} color="black" onPress={next}/>
+        <MaterialIcons name="arrow-forward-ios" size={24} color="#363062" onPress={next}/>
          </View>
     )
 }
@@ -63,8 +63,9 @@ const styles = StyleSheet.create({
     },
     title: {
         fontWeight: "bold",
-        backgroundColor: "rgba(237, 231, 225, 0.8)",
-        padding: 10
+        backgroundColor: "rgba(245, 232, 199, 0.8)",
+        padding: 10,
+        color: "#363062"
       },
       image: {
         flex: 1,
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         height: 150,
-        borderRadius: 10
+        borderRadius: 100
       },
       touch: {
         width: 500,

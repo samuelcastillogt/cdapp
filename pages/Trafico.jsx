@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet, StatusBar } from 'react-native'
 import {WebView} from "react-native-webview"
 import React from 'react'
-const Trafico = () => {
+const Trafico = ({navigation, route}) => {
+  const {uri} = route.params
   return (
     <WebView
     style={styles.container}
-    source={{ uri: "https://ul.waze.com/ul?ll=14.67266161%2C-90.57356800&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" }}
+    source={{ uri: uri }}
     renderLoading={()=> Loader}
     originWhitelist={['*']}
   />

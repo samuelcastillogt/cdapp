@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Ciudad Quetzal",
-    "slug": "Ciudad Quetzal",
+    "slug": "CD Quetzal",
     "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,7 +24,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.samuelcastilloseo.cdquetzal",
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -36,9 +36,6 @@
       ]
     ],
     "extra": {
-      "eas": {
-        "projectId": "e2d705a6-22df-41ac-a85e-b6960556f3e3"
-      }
     }
   }
 }
