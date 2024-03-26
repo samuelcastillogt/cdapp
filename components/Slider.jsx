@@ -5,12 +5,12 @@ const data = [
     {
         title: "Anunciate Aqui",
         uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RFril7o28C8wJuXshqBnSLDDMiJjutW9uw&usqp=CAU",
-        url: "https://mariachis-evangelicos.github.io/"
+        url: "https://cdquetzalmanager.firebaseapp.com/registro"
     },
     {
         title: "Imprenta en Ciudad Quetzal",
         uri: "https://marketincloud.com/wp-content/uploads/2015/02/8283313605_278727bf2b_k.jpg",
-        url: "https://mariachis-evangelicos.github.io/"
+        url: "https://imprentaenguatemala.blogspot.com/"
     },
     {
         title: "Mariachi Cristiano",
