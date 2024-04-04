@@ -1,6 +1,7 @@
 import React from "react"
 import { View, Text, StyleSheet, TouchableHighlight } from "react-native"
 import { Ionicons } from '@expo/vector-icons';
+import { constans } from "../constans";
 
 const BlogPost = (props)=>{
     return (
@@ -8,9 +9,9 @@ const BlogPost = (props)=>{
             <TouchableHighlight onPress={()=> props.ir.navigate("Web",  {uri: props.url})}>
                 <View style={styles.basicContainer}>
                  {
-                    props.index % 2 == 0 ? <Ionicons name="person-circle" size={24} color="black" /> :  <Ionicons name="person-circle-outline" size={24} color="white" />
+                    props.index % 2 == 0 ? <Ionicons name="person-circle" size={24} color={constans.colors.primary} /> :  <Ionicons name="person-circle-outline" size={24} color={constans.colors.white} />
                 }
-               <Text style={styles.title}>{props.title}</Text>                
+               <Text style={[styles.title, props.index % 2 == 0 ? styles.parText : styles.primoText]}>{props.title}</Text>                
                 </View>
 
             </TouchableHighlight>
@@ -35,14 +36,19 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "bold",
         padding: 10,
-        color: "#F5E8C7"
     },
     par: {
-        backgroundColor: "#818FB4",
+        backgroundColor: "#ADBC9F",
     },
     primo: {
-        backgroundColor: "#435585",
+        backgroundColor: "#436850",
         color: "white"
+    },
+    primoText:{
+        color: constans.colors.white 
+    },
+    parText:{
+        color: constans.colors.primary
     }
 })
 export default BlogPost

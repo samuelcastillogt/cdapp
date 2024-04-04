@@ -8,7 +8,7 @@ const BussinesCard = (props)=>{
   style={{width: 100, height: 100, position: "absolute", top: -30, left: "30%", borderRadius: 100}}/>
             <View style={styles.details}>
               <Text style={styles.title}>{data.data.nombre}</Text>
-            <Button title="Ver detalles" onPress={()=> navigation.navigate("Detalles", {data: data})} color={"#363062"}/>              
+            <Button title="Ver detalles" onPress={()=> navigation.navigate("Detalles", {data: data})} color={"#436850"}/>              
             </View>
 
         </View>
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "white"
+        backgroundColor: "#ADBC9F"
     },
     title: {
         padding: 10,

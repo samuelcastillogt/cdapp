@@ -14,6 +14,7 @@ import ShopStack from './stacks/ShopStack';
 import * as WebBrowser from "expo-web-browser"
 import * as Google from "expo-auth-session/providers/google"
 import Trafico from './stacks/Trafico';
+import { constans } from './constans';
 WebBrowser.maybeCompleteAuthSession()
 // ios = 584037980083-elpcbei2utdi1quqi83ctk477avmdqs1.apps.googleusercontent.com
 // android = 584037980083-itidperqsfcvctac7ttol51kamu3mmeh.apps.googleusercontent.com
@@ -48,20 +49,34 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-    {/* <Button title="login" onPress={()=> promptAsync()}/> */}
+    {/* <Button title="login" onPress={()=>promptAsync()}/> */}
     <NavigationContainer>
-    <Tab.Navigator>
+    <Tab.Navigator   
+    sceneAnimationEnabled={true}
+    screenOptions={() => ({
+      tabBarActiveTintColor: constans.colors.white,
+      tabBarInactiveTintColor: constans.colors.primary,
+      tabBarLabelStyle:{
+        fontSize: 15
+      },
+    tabBarStyle: {
+      height: 70,
+      backgroundColor: '#436850',
+      padding: 5,
+  },
+})}>
       <Tab.Screen name="Inicio" component={HomeStack} options={{
                                                               headerShown: false,
-                                                              tabBarIcon:() => {return <FontAwesome5 name="newspaper" size={24} color="black" />}
+                                                              tabBarIcon:(color) => {
+                                                                return <FontAwesome5 name="newspaper" size={24} color={color.color} />}
                                                               }} />
       <Tab.Screen name="Tienda" component={ShopStack} options={{
                                                               headerShown: false,
-                                                              tabBarIcon:() => {return <Fontisto name="shopping-store" size={24} color="black" />}
+                                                              tabBarIcon:(color) => {return <Fontisto name="shopping-store" size={24} color={color.color} />}
                                                             }} />
            <Tab.Screen name="Trafico" component={Trafico} options={{
                                                               headerShown: false,
-                                                              tabBarIcon:() => {return <FontAwesome name="car" size={24} color="black" />}
+                                                              tabBarIcon:(color) => {return <FontAwesome name="car" size={24} color={color.color} />}
                                                             }} />                                                       
     </Tab.Navigator>      
     </NavigationContainer>

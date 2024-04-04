@@ -22,13 +22,13 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         paddingTop: StatusBar.currentHeight,
-        backgroundColor: "#F5E8C7"
+        backgroundColor: "#12372A"
     },
     mainTitle: {
         fontSize: 30,
         fontWeight: "bold",
-        color:"#363062",
-        marginBottom: 20
+        color:"#FBFADA",
+        margin: 20
     },
     cardContainer: {
         justifyContent: "center",
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     button:{
         margin: 10,
         padding: 10,
-        backgroundColor: "#435585",
+        backgroundColor: "#436850",
         borderRadius: 10,
         height: 100,
         alignItems: "center",

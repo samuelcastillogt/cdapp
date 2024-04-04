@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         height: Dimensions.get("screen").height /1.3,
         marginTop: 20,
-        backgroundColor: "#435585",
+        backgroundColor: "#12372A",
         alignItems: "center",
         padding: 20,
         width: "100%",

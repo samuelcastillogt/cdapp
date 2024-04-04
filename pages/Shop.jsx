@@ -22,11 +22,11 @@ const Shop = ({navigation})=>{
         <View style={styles.container}>
             <Text style={styles.mainTitle}>Mercadito Digital</Text>
             <Picker
+            style={{backgroundColor: "#ADBC9F", margin: 10}}
   selectedValue={categorie}
   onValueChange={(itemValue, itemIndex) =>{
     setCategorie(itemValue)
     const newData = data.filter(item => item.data.categoria == itemValue)
-
     setFilter(newData)
   }
     
@@ -38,7 +38,7 @@ const Shop = ({navigation})=>{
   <Picker.Item label="Servicios" value="Servicios" />
   <Picker.Item label="Mercado " value="Mercado " />
 </Picker>
-            <Button title="Explorar Mapa" color={"#363062"} onPress={()=> navigation.navigate("Mapa", {uri: "https://www.google.com/maps/d/u/0/edit?mid=1QYi5aabzXOIiaPXmiODiRikOQFkcMMc&ll=14.698233839692445%2C-90.57712591882917&z=16"})}/>
+            <Button title="Explorar Mapa" color={"#436850"} onPress={()=> navigation.navigate("Mapa", {uri: "https://www.google.com/maps/d/u/0/edit?mid=1QYi5aabzXOIiaPXmiODiRikOQFkcMMc&ll=14.698233839692445%2C-90.57712591882917&z=16"})}/>
             <ScrollView>
                 {
                     data && data.length > 0 && categorie == "todos" && data.map(item => <BussinesCard navigation={navigation} key={item.id} data={item}/>)
@@ -59,12 +59,13 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         paddingTop: StatusBar.currentHeight,
-        backgroundColor: "#F5E8C7"
+        backgroundColor: "#12372A"
     },
     mainTitle: {
         fontSize: 30,
         fontWeight: "bold",
-        color:"#363062"
+        color:"#ADBC9F",
+        margin: 10
     },
     cardContainer: {
         justifyContent: "center",
