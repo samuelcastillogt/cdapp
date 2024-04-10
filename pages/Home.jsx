@@ -5,6 +5,8 @@ import { getAllData } from "../services/blog";
 import Loader from "../components/Loader";
 import BlogPost from "../components/BlogPost";
 import Slider from "../components/Slider";
+import { BannerAd } from 'react-native-google-mobile-ads';
+
 const Home = ({ navigation })=>{
     const [posts, setPosts] = useState()
     const data = async()=>{
@@ -20,6 +22,7 @@ const Home = ({ navigation })=>{
             <ScrollView >
             {posts && posts.length >0 && posts.map((item, index )=> <BlogPost url={item.url} title={item.title} ir={navigation} key={item.url} index={index}/>)  }            
             </ScrollView>
+            <BannerAd unitId="ca-app-pub-5314398130823639~6785887471" />
 {/* 
             <View style={styles.addButon} >
             <MaterialIcons name="add-to-photos" size={40} color="#365486" onPress={()=> console.log("lalalal")}/>
