@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         padding: 10,
         justifyContent: "center",
         paddingTop: StatusBar.currentHeight,
-        backgroundColor: "#12372A"
+        backgroundColor: "#fffff"
     },
     texto: {
         color: "#0F1035",

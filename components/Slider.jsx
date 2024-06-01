@@ -37,7 +37,7 @@ const Slider = (props)=>{
     }
     return(
         <View style={styles.container}> 
-        <MaterialIcons name="arrow-back-ios-new" size={24} color="#FBFADA" onPress={back}/>
+        <MaterialIcons name="arrow-back-ios-new" size={24} color="#ADBC9F" onPress={back} />
         <TouchableHighlight onPress={()=> navigation.navigate("Web",  {uri: data[index].url})} style={styles.touch}>
         <ImageBackground source={{uri: data[index].uri}} resizeMode="cover" style={styles.image}>
             
@@ -46,7 +46,7 @@ const Slider = (props)=>{
         </ImageBackground>            
         </TouchableHighlight>
 
-        <MaterialIcons name="arrow-forward-ios" size={24} color="#FBFADA" onPress={next}/>
+        <MaterialIcons name="arrow-forward-ios" size={24} color="#ADBC9F" onPress={next}/>
          </View>
     )
 }

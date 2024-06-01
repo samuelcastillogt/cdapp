@@ -49,7 +49,6 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-    {/* <Button title="login" onPress={()=>promptAsync()}/> */}
     <NavigationContainer>
     <Tab.Navigator   
     sceneAnimationEnabled={true}
