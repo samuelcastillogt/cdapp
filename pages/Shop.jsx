@@ -6,6 +6,7 @@ import BussinesCard from "../components/BussinesCard";
 import { getAllData } from "../services/business";
 import Loader from "../components/Loader"
 import FilterCategorie from "../components/FilterCategorie";
+import DontDataToShow from "../components/DontDataToShow";
 const categories = [{title:"Todos", value:"todos"}, 
                     {title:"Musicos", value:"Musicos"}, 
                     {title:"Transporte", value:"Transporte"},
@@ -62,7 +63,7 @@ const Shop = ({navigation})=>{
                     data && data.length > 0 && categorie != "todos" && filter.map(item => <BussinesCard navigation={navigation} key={item.id} data={item}/>)
                 }
                                                 {
-                    data && data.length > 0 && categorie != "todos" && filter.length == 0 && <Text>No hay nada por aqui</Text>
+                    data && data.length > 0 && categorie != "todos" && filter.length == 0 && <DontDataToShow />
                 }
                 {
                     loading == true && <Loader />

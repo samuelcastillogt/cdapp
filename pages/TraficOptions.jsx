@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         paddingTop: StatusBar.currentHeight,
-        backgroundColor: "#12372A"
+        backgroundColor: "#ffffff"
     },
     mainTitle: {
         fontSize: 30,
         fontWeight: "bold",
-        color:"#FBFADA",
+        color:"#436850",
         margin: 20
     },
     cardContainer: {

@@ -55,13 +55,14 @@ export default function App() {
     screenOptions={() => ({
       tabBarActiveTintColor: constans.colors.white,
       tabBarInactiveTintColor: constans.colors.primary,
+      padding: 10,
       tabBarLabelStyle:{
         fontSize: 15
       },
     tabBarStyle: {
       height: 70,
       backgroundColor: '#436850',
-      padding: 5,
+      padding: 10,
   },
 })}>
       <Tab.Screen name="Inicio" component={HomeStack} options={{
