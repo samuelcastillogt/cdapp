@@ -8,7 +8,7 @@ const FilterCategorie = (props)=>{
             {
                 categories.map((item)=> <TouchableHighlight style={styles.option} onPress={()=> filter(item.value)} key={item.title}>
                     <>
-                 <MaterialCommunityIcons name="google-my-business" size={30} color="white" /> 
+                 <MaterialCommunityIcons name={item.icon} size={30} color="white" /> 
                  <Text style={{color: "white"}}>{item.title}</Text>                   
                     </>
 
