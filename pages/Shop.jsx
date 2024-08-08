@@ -37,7 +37,7 @@ const Shop = ({navigation})=>{
         <View style={styles.container}>
             <Text style={styles.mainTitle}>Mercadito Digital</Text>
 <FilterCategorie filter={handleChangeCategorie} categories={categories}/>
-            <Button title="Explorar Mapa" color={"#436850"} onPress={()=> navigation.navigate("Mapa", {uri: "https://www.google.com/maps/d/u/0/edit?mid=1QYi5aabzXOIiaPXmiODiRikOQFkcMMc&ll=14.698233839692445%2C-90.57712591882917&z=16"})}/>
+            {/* <Button title="Explorar Mapa" color={"#436850"} onPress={()=> navigation.navigate("Mapa", {uri: "https://www.google.com/maps/d/u/0/edit?mid=1QYi5aabzXOIiaPXmiODiRikOQFkcMMc&ll=14.698233839692445%2C-90.57712591882917&z=16"})}/> */}
             <ScrollView>
                 {
                     data && data.length > 0 && categorie == "todos" && data.map(item => <BussinesCard navigation={navigation} key={item.id} data={item}/>)
